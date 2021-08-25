@@ -5,11 +5,23 @@ import React from 'react';
 const stringMan = (val)=>{
 var a =  document.getElementById("subject").value;
 var b =  document.getElementById("number").value;  
-const reverseWords = (sentence) =>{
-  const words = sentence.toString().split(" ")
-  const revWords = words.reverse()
-  return revWords.join(" ")
+function reverseWords(str) {
+  var result = '';
+  (function readWord(i = 0) {
+    var word = '';
+    if(i > str.length) {
+        return '';
+    }    
+    while(str[i] !== ' ' && i < str.length) {
+      word += str[i];
+      i++;
+    }    
+    readWord(++i); 
+    result += word + ' ';    
+  }());
+  return result.trim();
 }
+
 val.preventDefault();
 document.write(reverseWords(a));
 
