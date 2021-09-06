@@ -50,3 +50,7 @@ input[type=submit] {
   display: table;
   clear: both;
 }
+/* Js property of text */
+p {
+  font-size: 25px;
+}
