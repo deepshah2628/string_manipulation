@@ -6,9 +6,7 @@ const stringMan = (val) => {
   const wordsNotToReverse = document.getElementById("number").value;
 
   function reverseAllButLastN(paragraph, n) {
-    return paragraph
-      .split(".")
-      .map((sentence) => {
+    return paragraph.split(".").map((sentence) => {
         const words = sentence.trim().split(" ");
 
         const reversedWords = [];
@@ -20,19 +18,12 @@ const stringMan = (val) => {
 
         const normalWords = words.slice(words.length - n);
         return reversedWords.concat(normalWords).join(" ");
-      })
-      .join(". ");
+      }).join(". ");
   }
   const result = reverseAllButLastN(paragraph, wordsNotToReverse);
-  document.write(
-    '<span style="font-size:18px;">Input String: ' + paragraph + "</span>"
-  );
+  document.write('<span style="font-size:18px;">Input String: ' + paragraph + "</span>");
   document.write("<br>");
-  document.write(
-    '<span style="font-weight: bold;font-size:20px">Output String: ' +
-      result +
-      "</span>"
-  );
+  document.write('<span style="font-weight: bold;font-size:20px">Output String: ' +result + "</span>");
 };
 
 function App() {
